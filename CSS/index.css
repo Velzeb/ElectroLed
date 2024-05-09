@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7; /* Color de fondo */
+}
+
+header {
+    background-color: #0294c4; /* Color de fondo del encabezado */
+    color: #080001; /* Color del texto del encabezado */
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #080001; /* Color de los enlaces del menú */
+    text-decoration: none;
+}
+
+section {
+    display:inline-block; 
+    margin: 20px;
+}
+
+section h2, section p {
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+}
+
+footer {
+    background-color: #0294c4; /* Color de fondo del pie de página */
+    color: #f7f7f7; /* Color del texto del pie de página */
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
