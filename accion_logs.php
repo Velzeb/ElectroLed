@@ -23,6 +23,28 @@ require_once $dir."\accion_conexion.php";
             mysqli_close($link);
 
         }
+
+        function insertarDatosLog($actividad ,$email, $ip, $exitoso){
+            $link = conectarse();
+
+            $email = mysqli_real_escape_string($link, $email);
+            $ip = mysqli_real_escape_string($link, $ip);
+            $exitoso = $exitoso ? 1 : 0; 
+
+            $fecha_actual = date("Y-m-d");
+            $hora_actual = date("H:i:s");
+
+            $insert_query = "INSERT INTO log_actividades (email, actividad, fecha, hora, ip, exitoso) VALUES ('$email', '$actividad', '$fecha_actual', '$hora_actual', '$ip', $exitoso)";
+
+            if(mysqli_query($link, $insert_query)){
+                //echo "Datos insertados correctamente.";
+            } else{
+                //echo "Error al insertar datos: " . mysqli_error($link);
+            }
+
+            mysqli_close($link);
+
+        }
       
         function obtenerDatosLog() {
             $link = conectarse();

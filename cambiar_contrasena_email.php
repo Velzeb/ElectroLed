@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Registro - Electroled</title>
+    <title>Restablecer contraseña - Electroled</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -40,7 +40,6 @@
           <a class="nav-link hvr-float " href="iniciar_cuenta.php">Iniciar Sesion</a>
         </li>
       </ul>
-      
     </div>
   </div>
 </nav>
@@ -49,65 +48,34 @@
 <div class="container position-absolute top-50 start-50 translate-middle ">
     <div class="row justify-content-center">
         <div class="col-md-4 hvr-grow">
-        <form action="accion_crear_cuenta.php" method="POST">
-            <p class="fs-1 fw-bold ">Crear Cuenta</p>
+        <form action="accion_cambiar_contrasena.php" method="POST">
+            <p class="fs-1 fw-bold">Restablecer la contraseña</p>
+            <p class="fs-normal">Te enviaremos un email para restablecer tu contraseña.</p>
             <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre:</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                <label for="nombre" class="form-label">Correo electronico:</label>
+                <input type="text" class="form-control" id="email" name="email" required>
             </div>
-            <div class="mb-3">
-                <label for="nombre" class="form-label">Apellido:</label>
-                <input type="text" class="form-control" id="apellido" name="apellido" required>
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label" class="form-label">Correo Electrónico:</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-            </div>
-            <div class="mb-3">
-                <label for="contrasena">Contraseña:</label>
-                <input type="password" class="form-control" id="contrasena" name="contrasena" required>
-            </div>
+
             <div class="mb-3 text-center">
-                <?php
-                if(isset($_GET["error"])) {
-                  $error = $_GET["error"];
-                    switch ($error) {
-                      case "email_existente":
-                                ?>
-                                    <div class="alert alert-dark alert-dismissible fade show" role="alert">
-                                      <strong> Email ya registrado.</strong>
-                                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                    </div>
-                                <?php
-                          break;
-                      case "registro_error":
-                                ?>
-                                    <div class="alert alert-dark alert-dismissible fade show" role="alert">
-                                      <strong> Error al registrarte.</strong>
-                                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                    </div>
-                                <?php
-                          break;
-                    }
-                }else{
-                   if(isset($_GET["success"])){
-                      $error = $_GET["success"];
+                    <?php
+                    if(isset($_GET["success"])) {
+                        $error = $_GET["success"];
                         switch ($error) {
-                             case "registro_success":
-                             ?>
+                            case "correo_success":
+                                ?>
                                     <div class="alert alert-dark alert-dismissible fade show" role="alert">
-                                      <strong> Se ha enviado un correo electrónico para confirmar la cuenta.</strong>
+                                      <strong> Email enviado.</strong>
                                       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                     </div>
                                 <?php
-                             break;
-                        } 
-                    }
-                }
-                ?>
+                                break;
+                            }
+                        }
+                    ?>
             </div>
-            <div class="mb-3 text-center">
-                <button  type="submit" class="btn btn-dark hvr-float">Crear</button>
+
+            <div class="mb-3 ">
+                <button type="submit" class="btn btn-dark hvr-float">Enviar</button>
             </div>
         </form>
         </div>
@@ -120,8 +88,8 @@
         <p class="mt-4">&copy; 2024 Electroled | Todos los derechos reservados.</p>
     </div>
 </footer>
-</body>
 
+</body>
 <!-- animacion -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>AOS.init();</script>
