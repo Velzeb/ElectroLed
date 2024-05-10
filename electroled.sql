@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 07-05-2024 a las 20:14:29
+-- Tiempo de generación: 10-05-2024 a las 18:37:41
 -- Versión del servidor: 8.2.0
 -- Versión de PHP: 8.2.13
 
@@ -37,32 +37,47 @@ CREATE TABLE IF NOT EXISTS `log_actividades` (
   `ip` varchar(30) NOT NULL,
   `exitoso` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=76 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Volcado de datos para la tabla `log_actividades`
 --
 
 INSERT INTO `log_actividades` (`id`, `email`, `actividad`, `fecha`, `hora`, `ip`, `exitoso`) VALUES
-(1, 'asd@gmail.com', 'Inicio de sesion', '2024-05-07', '02:26:25', '::1', 0),
-(2, 'asd2@gmail.com', 'Inicio de sesion', '2024-05-07', '02:28:40', '::1', 0),
-(3, 'macvcdls@gmail.com', 'Inicio de sesion', '2024-05-07', '02:45:29', '::1', 0),
-(4, 'macvcdls@gmail.com', 'Inicio de sesion', '2024-05-07', '02:46:13', '::1', 0),
-(5, 'macvcdls@gmail.com', 'Inicio de sesion', '2024-05-07', '02:46:17', '::1', 0),
-(6, 'macvcdls@gmail.com', 'Inicio de sesion', '2024-05-07', '02:46:24', '::1', 0),
-(7, 'macvcdls@gmail.com', 'Inicio de sesion', '2024-05-07', '02:46:39', '::1', 0),
-(8, 'macvcdls@gmail.com', 'Inicio de sesion', '2024-05-07', '02:46:45', '::1', 0),
-(9, 'macvcdls@gmail.com', 'Inicio de sesion', '2024-05-07', '02:47:41', '::1', 0),
-(10, 'macvcdls@gmail.com', 'Inicio de sesion', '2024-05-07', '02:47:50', '::1', 0),
-(11, 'macvcdls@gmail.com', 'Inicio de sesion', '2024-05-07', '02:48:00', '::1', 0),
-(12, 'macvcdls@gmail.com', 'Inicio de sesion', '2024-05-07', '02:48:23', '::1', 0),
-(13, 'macvcdls@gmail.com', 'Inicio de sesion', '2024-05-07', '02:49:13', '::1', 0),
-(14, 'macvcdls@gmail.com', 'Inicio de sesion', '2024-05-07', '02:49:54', '::1', 0),
-(15, 'macvcdls@gmail.com', 'Inicio de sesion', '2024-05-07', '02:50:18', '::1', 0),
-(16, 'macvcdls@gmail.com', 'Inicio de sesion', '2024-05-07', '02:52:25', '::1', 1),
-(17, 'macvcdls@gmail.com', 'Inicio de sesion', '2024-05-07', '02:52:58', '::1', 0),
-(18, 'macvcdls@gmail.com', 'Inicio de sesion', '2024-05-07', '02:54:36', '::1', 0),
-(19, 'macvcdls@gmail.com', 'Inicio de sesion', '2024-05-07', '19:55:45', '::1', 1);
+(42, 'marco.conde@ucb.edu.bo', 'Crear cuenta', '2024-05-09', '15:31:23', '::1', 1),
+(43, 'marco.conde@ucb.edu.bo', 'Crear cuenta', '2024-05-09', '15:31:56', '::1', 1),
+(44, 'marco.conde@ucb.edu.bo', 'Crear cuenta', '2024-05-09', '15:32:51', '::1', 1),
+(45, 'macvcdls@gmail.com', 'Crear cuenta', '2024-05-09', '15:33:08', '::1', 0),
+(46, 'macvcdls@gmail.com', 'Correo contraseña', '2024-05-09', '15:39:38', '::1', 1),
+(47, 'macvcdls@gmail.com', 'Correo contraseña', '2024-05-09', '15:40:23', '::1', 1),
+(48, 'macvcdls@gmail.com', 'Iniciar sesión', '2024-05-09', '17:29:29', '::1', 0),
+(49, 'macvcdls@gmail.com', 'Crear cuenta', '2024-05-09', '17:30:01', '::1', 0),
+(50, 'macvcdls@gmail.com', 'Iniciar sesión', '2024-05-09', '17:31:05', '::1', 1),
+(51, 'macvcdls@gmail.com', 'Correo contraseña', '2024-05-09', '17:31:39', '::1', 1),
+(52, 'macvcdls@gmail.com', 'Restablecer la contraseña', '2024-05-09', '17:32:34', '::1', 1),
+(53, 'macvcdls@gmail.com', 'Iniciar sesión', '2024-05-09', '17:32:57', '::1', 1),
+(54, 'macvcdls@gmail.com', 'Correo contraseña', '2024-05-09', '17:51:12', '::1', 1),
+(55, 'macvcdls@gmail.com', 'Restablecer la contraseña', '2024-05-09', '17:52:18', '::1', 1),
+(56, 'macvcdls@gmail.com', 'Iniciar sesión', '2024-05-09', '18:13:34', '::1', 0),
+(57, 'macvcdls@gmail.com', 'Correo contraseña', '2024-05-09', '18:13:45', '::1', 1),
+(58, 'macvcdls@gmail.com', 'Restablecer la contraseña', '2024-05-09', '18:14:25', '::1', 1),
+(59, 'macvcdls@gmail.com', 'Restablecer la contraseña', '2024-05-09', '18:14:25', '::1', 1),
+(60, 'macvcdls@gmail.com', 'Iniciar sesión', '2024-05-09', '18:14:42', '::1', 1),
+(61, 'marco.conde@ucb.edu.bo', 'Crear cuenta', '2024-05-09', '18:17:01', '::1', 1),
+(62, 'marco.conde@ucb.edu.bo', 'Crear cuenta', '2024-05-09', '18:17:32', '::1', 1),
+(63, 'marco.conde@ucb.edu.bo', 'Crear cuenta', '2024-05-09', '18:18:18', '::1', 0),
+(64, 'macvcdls@gmail.com', 'Iniciar sesión', '2024-05-09', '19:29:33', '::1', 0),
+(65, 'macvcdls@gmail.com', 'Crear cuenta', '2024-05-09', '19:29:55', '::1', 1),
+(66, 'marco.conde@ucb.edu.bo', 'Crear cuenta', '2024-05-09', '19:31:58', '::1', 1),
+(67, 'macvcdls@gmail.com', 'Correo contraseña', '2024-05-09', '19:33:18', '::1', 1),
+(68, 'macvcdls@gmail.com', 'Restablecer la contraseña', '2024-05-09', '19:33:53', '::1', 1),
+(69, 'macvcdls@gmail.com', 'Iniciar sesión', '2024-05-09', '19:34:04', '::1', 1),
+(70, 'slklskdfmsdf@gmail.com', 'Iniciar sesión', '2024-05-09', '19:39:00', '::1', 0),
+(71, 'marco@gmail.com', 'Iniciar sesión', '2024-05-09', '19:39:16', '::1', 0),
+(72, 'macvcdls@gmail.com', 'Iniciar sesión', '2024-05-09', '19:39:44', '::1', 0),
+(73, 'macvcdls@gmail.com', 'Iniciar sesión', '2024-05-09', '19:39:57', '::1', 0),
+(74, 'macvcdls@gmail.com', 'Iniciar sesión', '2024-05-09', '19:40:09', '::1', 0),
+(75, 'macvcdls@gmail.com', 'Iniciar sesión', '2024-05-09', '19:41:09', '::1', 0);
 
 -- --------------------------------------------------------
 
@@ -84,14 +99,15 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `hash` varchar(100) DEFAULT NULL,
   `intentos` int DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
 INSERT INTO `usuario` (`id`, `ci`, `nombre`, `apellido`, `direccion`, `celular`, `email`, `contrasena`, `activa`, `hash`, `intentos`) VALUES
-(1, NULL, 'marco', 'conde', NULL, NULL, 'macvcdls@gmail.com', '123456789', 1, '2d3f767ed9ca1d896090abe71b60ca05', 0);
+(5, NULL, '1111', '11111', NULL, NULL, 'marco.conde@ucb.edu.bo', '123456', 0, 'f7f82942e7061cec52cacab151296e97', 0),
+(4, NULL, 'marco', 'conde', NULL, NULL, 'macvcdls@gmail.com', '123456', 1, '24718e01d9cec61d9c24d78f261761d5', 0);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
